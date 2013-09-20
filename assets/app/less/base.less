@@ -1,0 +1,51 @@
+html {
+	font: 15px/1.5 Helvetica, arial, sans-serif;
+}
+
+html, body {
+	height: 100%;
+}
+
+header * {
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 100;
+
+	&:first-child {
+		margin: 0;
+	}
+}
+
+a {
+	.transition(all 0.3s);
+	text-decoration: none;
+	color: #fff;
+
+	&:hover {
+		color: @orange;
+	}
+}
+
+main, aside {
+	padding: 1rem;
+}
+
+main {
+	width: 75%;
+	float: left;
+
+	a {
+		color: @orange;
+
+		&:hover {
+			color: @gray;
+		}
+	}
+}
+
+aside {
+	width: 25%;
+	float: left;
+}

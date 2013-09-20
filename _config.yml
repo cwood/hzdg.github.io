@@ -1,0 +1,44 @@
+title: HZ Labs
+description: "Codes, bugs and obligatory rants"
+# disqus_shortname: 
+#Comment out url when working locally to resolve base urls correctly
+# url:              http://your-website.com
+
+# Analytics and webmaster tools stuff goes here
+google_analytics: UA-XXXXX-X
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink: /:categories/:title/
+
+# Amount of post to show on home page
+paginate: 20
+
+include: [".htaccess"]
+exclude: ["less", "coffee", "*.sublime-project", "*.sublime-workspace", "package.json", "node_modules"]
+
+siteurl: 'http://hzdg.github.io/labs-jekyll-theme'
+
+# Owner information
+owner:
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:   
+
+contributors:
+  aebsr:
+    name: Antoine Bulter
+    gravatar: a0ec088786da70f0f0a7d29774533ef8
+    twitter: aebsr
+    github: aebsr
+  kkubasik:
+    name: Kevin Kubasik
+    gravatar: 12e480a364a5c19214f99b4dfe9a11d5
+    twitter: kkubasik
+    github: kkubasik
+
+static_pages:
+  - name: 'About'
+    url: '/about/'
+  - name: 'Archive'
+    url: '/articles/'
+  - name: 'Projects'
+    url: '/projects/'

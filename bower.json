@@ -1,0 +1,11 @@
+{
+  "name": "labs-jekyll-theme",
+  "version": "0.0.1",
+  "dependencies": {
+    "modernizr": "~2.x",
+    "normalize-css": "~2.x",
+    "bedrock": "~1.x",
+    "requirejs": "~2.x",
+    "masonry": "~3.1.2"
+  }
+}

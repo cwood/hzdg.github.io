@@ -1,0 +1,38 @@
+---
+layout: base
+---
+<article class="post">
+	<header>
+		<time class="meta" datetime="{{ page.date | date_to_xmlschema }}">
+			{{ page.date | date: "%B %d, %Y" }}
+		</time>
+
+		{% if page.link %}
+		<h1>
+			<a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a>
+		</h1>
+		{% else %}
+		<h1>
+			{{ page.title }}
+		</h1>
+		{% endif %}
+	</header>
+
+	{{ content }}
+
+		<div class="meta">
+		{% if page.author %}{% assign author = site.contributors[page.author] %}
+			by {{ author.name }}
+			{% unless page.source %}{% if author.gravatar %}<img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=200" width="100" height="100" class="gravatar">{% endif %}{% endunless %}
+		{% endif %}
+
+		{% if site.disqus_shortname and page.comments %}
+			&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="{{ site.url }}{{ page.url }}#disqus_thread">Comment</a></span>{% endif %}
+			{% if page.link %}<a href="{{ page.link }}" class="icon-link" rel="bookmark">Bookmark</a>
+		{% endif %}
+		</div>
+	</header>
+
+</article>
+
+

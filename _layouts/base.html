@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    {% include head.html %}
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" class="character-{{ site.character }}">
+    {% include browser-upgrade.html %}
+
+    {% include header.html %}
+
+    <div id="site">
+      <main>
+        {{ content }}
+      </main>
+
+      <aside>
+        <ul id="navigation">
+          <li><a href="/">Home</a></li>
+          {% for page in site.static_pages %}
+          <li>
+            <a href="{{ page.url }}">{{ page.name }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        <h3>Contributors</h3>
+        <ul id="contributors">
+          {% for author in  site.contributors %}
+          <li>
+            <a href="http://twitter.com/{{ author[1].twitter }}">{{ author[1].name }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </aside>
+    </div>
+
+    {% include footer.html %}
+    {% include ga.html %}
+  </body>
+</html>
