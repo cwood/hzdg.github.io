@@ -1,2 +1,9 @@
 /node_modules
 _site
+
+/assets/*
+!/assets/app/*
+
+/assets/app/js/*
+/assets/app/css/*
+!/assets/app/css/fontello.css
