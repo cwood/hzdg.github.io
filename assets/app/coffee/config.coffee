@@ -3,4 +3,8 @@ require.config
   waitSeconds: 200
   paths:
     modernizr: 'modernizr/modernizr'
-    masonry: 'masonry/masonry'
+    scrollMonitor: 'scrollMonitor/scrollMonitor'
+    jquery: 'jquery/jquery'
+
+  shim:
+  	scrollMonitor: ['jquery']
