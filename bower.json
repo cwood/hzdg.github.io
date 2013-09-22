@@ -6,6 +6,7 @@
     "normalize-css": "~2.x",
     "bedrock": "~1.x",
     "requirejs": "~2.x",
-    "masonry": "~3.1.2"
+    "masonry": "~3.1.2",
+    "scrollMonitor": "~1.0.5"
   }
 }
