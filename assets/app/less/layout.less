@@ -10,6 +10,7 @@ body > header {
 		position: relative;
 		top: -50%;
 		left: -50%;
+		margin: 0;
 	
 		img {
 			position: absolute;
@@ -46,17 +47,18 @@ body > header {
 			display: inline-block;
 		}
 	}
+}
 
-	.icon-menu {
-		position: fixed;
-		top: 1rem;
-		right: 1rem;
-		color: #fff;
-		z-index: 2;
+.icon-menu {
+	.transition(opacity 0.5s ease-in-out);
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	color: #fff;
+	z-index: 2;
 
-		&:hover {
-			color: @orange;
-		}
+	&:hover {
+		color: @orange;
 	}
 }
 

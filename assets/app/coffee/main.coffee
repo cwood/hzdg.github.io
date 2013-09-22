@@ -1,13 +1,17 @@
 define (require) ->
-  # $ = require 'jquery'
   require 'modernizr'
-  # Masonry = require 'masonry'
+  $ = require 'jquery'
+  scrollMonitor = require 'scrollMonitor'
 
-  # articles = document.querySelector("main")
-  # msnry = new Masonry(articles,
-  #   itemSelector: "article"
-  #   gutter: 0
-  #   isFitWidth: true
-  # )
-  # msnry.bindResize()
+  aside = $("main + aside")
+  html = $('html')
 
+  asideWatcher = scrollMonitor.create( aside )
+  asideWatcher.stateChange ->
+    asideOffset = $(aside).offset()
+    html.toggleClass "fixed", @isAboveViewport
+    console.log asideOffset
+    aside.css(
+      left: asideOffset.left
+      right: 'auto'
+    )
