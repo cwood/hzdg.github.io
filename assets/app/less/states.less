@@ -4,9 +4,98 @@ html.fixed {
 		top: 0;
 		right: 0;
 		z-index: 1;
+		width: 23.4375%;
+		max-width: 17.00016em;
+	}
+
+	@media (min-width: 54em) {
+		.icon-menu {
+			.opacity(0);
+		}
+	}
+}
+
+@media (max-width: 54em) {
+	main {
+		width: 100%;
+		float: none;
+	}
+
+	aside {
+		.transition(all .4s);
+		.size(0);
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		float: none;
+		overflow: hidden;
+		background: rgba(255, 255, 255, 0.85);
+		padding: 0;
+
+		ul {
+			.transition(opacity 0.6s);
+			opacity: 0;
+		}
+
+		.open-nav & {
+			.size(100%);
+
+			ul {
+				opacity: 1;
+			}
+		}
+
+		> a {
+			display: none;
+		}
+	}
+
+	#contributors, h3 {
+		display: none;
+	}
+
+	#navigation {
+		.border-radius(1em);
+		.size(90%);
+		padding: 2rem;
+		background: rgba(0, 0, 0, 0.85);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+
+		&:before {
+			display: none;
+		}
 	}
 
 	.icon-menu {
-		.opacity(0);
+		.border-radius(0.25em);
+		background: rgba(0, 0, 0, 0.75);
+		padding: 0.125em;
+		font-size: 1.625em;
+	}
+}
+
+// Coderwall Article Source
+[data-source="coderwall"] {
+	@article-bg: #358cce;
+	background-color: @article-bg;
+	background-image: url("@{static-url}data-sources/coderwall.png");
+	background-size: 3em;
+	padding-right: 1rem;
+	border-color: darken(@article-bg, 10%);
+
+	header, a, a:hover {
+		color: #fff;
+	}
+
+	a:after {
+		background: #fff;
 	}
 }

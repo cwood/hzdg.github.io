@@ -1,7 +1,8 @@
 ---
 layout: base
+page_id: post
 ---
-<article class="post">
+<article>
 	<header>
 		<time class="meta" datetime="{{ page.date | date_to_xmlschema }}">
 			{{ page.date | date: "%B %d, %Y" }}
@@ -20,18 +21,23 @@ layout: base
 
 	{{ content }}
 
-		<div class="meta">
+	<footer>
 		{% if page.author %}{% assign author = site.contributors[page.author] %}
-			by {{ author.name }}
-			{% unless page.source %}{% if author.gravatar %}<img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=200" width="100" height="100" class="gravatar">{% endif %}{% endunless %}
-		{% endif %}
 
-		{% if site.disqus_shortname and page.comments %}
-			&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="{{ site.url }}{{ page.url }}#disqus_thread">Comment</a></span>{% endif %}
-			{% if page.link %}<a href="{{ page.link }}" class="icon-link" rel="bookmark">Bookmark</a>
+			{% if author.github %}<a href="http://github.com/{{ author.github }}" class="icon-github" title="Github"></a>{% endif %}
+			
+			{% unless page.source %}{% if author.gravatar %}<img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=200" width="100" height="100" class="gravatar">{% endif %}{% endunless %}
+			
+			{% if author.twitter %}<a href="http://twitter.com/{{ author.twitter }}" class="icon-twitter" title="Twitter"></a>{% endif %}
+			
+			<br />by {{ author.name }}
 		{% endif %}
-		</div>
-	</header>
+	</footer>
+
+	{% if site.disqus_shortname and page.comments %}
+		&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="{{ site.url }}{{ page.url }}#disqus_thread">Comment</a></span>{% endif %}
+		{% if page.link %}<a href="{{ page.link }}" class="icon-link" rel="bookmark">Bookmark</a>
+	{% endif %}
 
 </article>
 

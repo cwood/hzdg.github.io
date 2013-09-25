@@ -16,6 +16,9 @@ paginate: 20
 include: [".htaccess"]
 exclude: ["less", "coffee", "*.sublime-project", "*.sublime-workspace", "package.json", "node_modules"]
 
+pygments:    true
+markdown:    kramdown
+
 siteurl: 'http://hzdg.github.io/labs-jekyll-theme'
 
 # Owner information
@@ -39,6 +42,20 @@ static_pages:
   - name: 'About'
     url: '/about/'
   - name: 'Archive'
-    url: '/articles/'
+    url: '/archive/'
   - name: 'Projects'
     url: '/projects/'
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: true
+
+  coderay:
+    coderay_line_numbers: nil
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class

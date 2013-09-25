@@ -85,9 +85,12 @@
 // Gravatars
 .gravatar {
 	.border-radius(50%);
-	.v-margin(auto);
 	display: block;
 	overflow: hidden;
+}
+
+header .gravatar {
+	.v-margin(auto);
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -103,6 +106,18 @@ figure {
 		max-width: 100%;
 		float: left;
 	}
+}
+
+figcaption {
+	.h-margin(3rem);
+	.v-padding(1rem);
+	clear: both;
+	text-align: center;
+	margin: 0 3rem;
+	color: #666;
+	font-family: cursive;
+	font-style: italic;
+	font-size: 0.9em;
 }
 
 .half img {

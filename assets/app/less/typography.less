@@ -1,0 +1,67 @@
+// Typography
+// --------------------------------------------------
+
+
+h1 {
+	font-size: 2.5rem;
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+h3 {
+	font-size: 1.375rem;
+}
+
+h4 {
+	font-size: 1.25rem;
+}
+
+h5, h6 {
+	font-size: 1.25rem;
+}
+
+// Blockquotes
+// --------------------------------------------------
+blockquote {
+	font-family: Georgia, serif;
+	font-style: italic;
+	font-size: 1.5rem;
+}
+
+
+// Code
+// --------------------------------------------------
+tt, code, kbd, samp, pre {
+	font-family: Arial, sans-serif;
+}
+
+p,
+li { 
+	code {
+		font-size: 0.8rem;
+		white-space: nowrap;
+		margin: 0 0.25em;
+		padding: 0 0.4em;
+		border: 1px solid #cdcdcd;
+		background-color: #dedede;
+		.border-radius(3px);
+	}
+}
+pre {
+	font-size: 0.8rem;
+	line-height: 1.5;
+	overflow-x: auto;
+	white-space: pre;
+	&::-webkit-scrollbar {
+		height: 12px;
+		background-color: #34362e;
+		border-radius: 0 0 0.333em 0.333em;
+	}
+	&::-webkit-scrollbar-thumb:horizontal {
+		background-color: #6a6d5d;
+		.border-radius(4px);
+	}
+}

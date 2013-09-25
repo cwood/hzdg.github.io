@@ -1,6 +1,42 @@
 ---
-layout: post-index
-permalink: /articles/
-title: All Posts
-description: "An archive of posts."
+layout: base
+title: Your New Jekyll Site
+permalink: /archive/
+page_id: home
 ---
+
+{% for post in site.posts %}
+<article{% if post.source %} data-source="{{ post.source }}"{% endif %}>
+
+	<header>
+		<time class="meta" datetime="{{ post.date | date_to_xmlschema }}">
+			{{ post.date | date: "%B %d, %Y" }}
+		</time>
+
+		{% if post.link %}
+		<h2>
+			<a href="{{ post.link }}">{{ post.title }}</a>
+		</h2>
+		{% else %}
+		<h2>
+			<a href="{{ site.url }}{{ post.url }}" rel="bookmark">{{ post.title }}</a>
+		</h2>
+		{% endif %}
+
+		<div class="meta">
+		{% if post.author %}{% assign author = site.contributors[post.author] %}
+			by {{ author.name }}
+			{% unless post.source %}{% if author.gravatar %}<img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=200" width="100" height="100" class="gravatar">{% endif %}{% endunless %}
+		{% endif %}
+
+		{% if site.disqus_shortname and post.comments %}
+			&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="{{ site.url }}{{ post.url }}#disqus_thread">Comment</a></span>{% endif %}
+			{% if post.link %}<a href="{{ site.url }}{{ post.url }}" class="icon-link" rel="bookmark">Bookmark</a>
+		{% endif %}
+		</div>
+	</header>
+
+	{{ post.description }}
+
+</article>
+{% endfor %}

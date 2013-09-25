@@ -6,10 +6,11 @@
   <head>
     {% include head.html %}
   </head>
-  <body itemscope itemtype="http://schema.org/WebPage" class="character-{{ site.character }}">
+  <body itemscope itemtype="http://schema.org/WebPage" {% if page.page_id %}class="{{ page.page_id }}{% endif %}">
     {% include browser-upgrade.html %}
 
-    {% include header.html %}
+    {% if page.page_id == 'home' %}{% include header.html %}{% endif %}
+    <a href="#navigation" class="icon-menu" title="Jump to Navigation"></a>
 
     <div id="site">
       <main>
@@ -17,8 +18,10 @@
       </main>
 
       <aside>
+          {% if page.page_id != 'home' %}
+          <a href="/"><img src="/assets/app/images/logo.svg" alt="" /></a>
+          {% endif %}
         <ul id="navigation">
-          <li><a href="/">Home</a></li>
           {% for page in site.static_pages %}
           <li>
             <a href="{{ page.url }}">{{ page.name }}</a>
