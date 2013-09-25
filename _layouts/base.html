@@ -9,8 +9,8 @@
   <body itemscope itemtype="http://schema.org/WebPage" {% if page.page_id %}class="{{ page.page_id }}{% endif %}">
     {% include browser-upgrade.html %}
 
-    {% if page.page_id == 'home' %}{% include header.html %}{% endif %}
     <a href="#navigation" class="icon-menu" title="Jump to Navigation"></a>
+    {% if page.page_id == 'home' %}{% include header.html %}{% endif %}
 
     <div id="site">
       <main>
