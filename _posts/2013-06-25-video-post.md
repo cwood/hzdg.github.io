@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "A Post with a Video"
+author: mattewwithanm
 ---
 
 <iframe width="560" height="315" src="http://www.youtube.com/embed/SqYiglufb8Y"> </iframe>

@@ -34,9 +34,14 @@ contributors:
     github: aebsr
   kkubasik:
     name: Kevin Kubasik
-    gravatar: 12e480a364a5c19214f99b4dfe9a11d5
+    gravatar: 952aa92c2f88da8b18e45cff8e6897fc
     twitter: kkubasik
     github: kkubasik
+  mattewwithanm:
+    name: Mattew Tretter
+    gravatar: 0e631d686b8356102da3721bd8cd65c4
+    twitter: mattewwithanm
+    github: mattewwithanm
 
 static_pages:
   - name: 'About'
