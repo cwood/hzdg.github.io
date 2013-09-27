@@ -99,3 +99,26 @@ html.fixed {
 		background: #fff;
 	}
 }
+
+// Coderwall Article Source
+[data-source="github"] {
+	@article-bg: #f3f3f3;
+	background-color: @article-bg;
+	background-image: url("@{static-url}data-sources/github.png");
+	background-size: 3em;
+	background-position: 95% center;
+	padding-right: 1rem;
+	border-color: darken(@article-bg, 10%);
+
+	header, a {
+		color: #4183c4;
+	}
+
+	a:hover {
+		color: #000;
+	}
+
+	a:after {
+		background: #4183c4;
+	}
+}
