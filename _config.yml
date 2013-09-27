@@ -37,11 +37,11 @@ contributors:
     gravatar: 952aa92c2f88da8b18e45cff8e6897fc
     twitter: kkubasik
     github: kkubasik
-  mattewwithanm:
-    name: Mattew Tretter
+  matthewwithanm:
+    name: Matthew Tretter
     gravatar: 0e631d686b8356102da3721bd8cd65c4
-    twitter: mattewwithanm
-    github: mattewwithanm
+    twitter: matthewwithanm
+    github: matthewwithanm
 
 static_pages:
   - name: 'About'
