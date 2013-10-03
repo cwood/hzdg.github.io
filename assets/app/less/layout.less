@@ -1,5 +1,6 @@
 body > header {
 	.size(100%);
+	.transition(opacity 0.15s);
 	position: fixed;
 	z-index: 0;
 	text-align: center;
@@ -47,6 +48,10 @@ body > header {
 			display: inline-block;
 		}
 	}
+
+	.open-nav & {
+		opacity: 0;
+	}
 }
 
 body > footer {
@@ -59,20 +64,6 @@ body > footer {
 	div {
 		width: 75%;
 		padding: 1rem;
-	}
-}
-
-.icon-menu {
-	.transition(opacity 0.5s ease-in-out);
-	position: fixed;
-	top: 1rem;
-	right: 1rem;
-	color: #fff;
-	z-index: 2;
-	font-size: 2em;
-
-	&:hover {
-		color: @orange;
 	}
 }
 
@@ -102,7 +93,19 @@ article, #page {
 	overflow: hidden;
 
 	.meta {
-		font-size: 0.75em;
+		font-size: 0.65em;
+	}
+
+	@media (max-width: 54em) {
+		padding-right: 1rem;
+
+		div.meta {
+			display: none;
+		}
+
+		a {
+			display: block;
+		}
 	}
 }
 
@@ -112,7 +115,7 @@ article header {
 
 		&:after {
 			.size(0, 2px);
-			.transition(width 0.2s ease-in-out);
+			.transition(width 0.1s ease-in-out);
 			content: '';
 			display: block;
 			position: absolute;
@@ -127,8 +130,10 @@ article header {
 	}
 
 	h2 {
-		.v-padding(0.5em);
+		// .v-padding(0.5em);
+		margin-bottom: 0.5em;
 		font-size: 1.7em;
+		line-height: 1;
 	}
 }
 
@@ -153,6 +158,7 @@ aside {
 	padding: 2rem;
 	overflow: visible;
 	color: black;
+	background: #fff;
 }
 
 article footer {

@@ -44,12 +44,10 @@ contributors:
     github: matthewwithanm
 
 static_pages:
-  - name: 'About'
-    url: '/about/'
-  - name: 'Archive'
+  - name: 'Meet HZ'
+    url: 'http://meethzdg.com'
+  - name: 'Labs Archive'
     url: '/archive/'
-  - name: 'Projects'
-    url: '/projects/'
 
 kramdown:
   auto_ids: true

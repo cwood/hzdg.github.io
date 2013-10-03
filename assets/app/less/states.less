@@ -1,3 +1,4 @@
+// Fixed nav positioning
 html.fixed {
 	main + aside {
 		position: fixed;
@@ -7,78 +8,96 @@ html.fixed {
 		width: 23.4375%;
 		max-width: 17.00016em;
 	}
+}
 
-	@media (min-width: 54em) {
-		.icon-menu {
-			.opacity(0);
-		}
+// Nav Icon - only exposed on tablet and below
+.icon-menu {
+	background: @orange;
+	padding: 0.125em;
+	font-size: 2em;
+	left: 100%;
+	top: 1rem;
+	margin-left: -3.333rem;
+	position: fixed;
+	z-index: 2;
+	display: none;
+
+	&:hover {
+		color: #000;
+	}
+
+	@media (max-width: 54em) {
+		display: block;
+	}
+
+	.open-nav & {
+		color: #000;
+		left: 3.333rem;
 	}
 }
 
+// Animation and styles for mobile nav
 @media (max-width: 54em) {
+	body {
+		position: relative;
+	}
+
+	#site {
+		width: 100%;
+	}
+
 	main {
 		width: 100%;
 		float: none;
 	}
 
 	aside {
-		.transition(all .4s);
-		.size(0);
+		.size(100%);
+		padding: 2rem 5.333rem 2rem 2rem;
+		background: @orange;
 		position: fixed;
 		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		margin: auto;
+		left: 100%;
 		float: none;
-		overflow: hidden;
-		background: rgba(255, 255, 255, 0.85);
-		padding: 0;
-
-		ul {
-			.transition(opacity 0.6s);
-			opacity: 0;
-		}
-
-		.open-nav & {
-			.size(100%);
-
-			ul {
-				opacity: 1;
-			}
-		}
+		overflow: scroll;
+		color: #000;
+		margin-right: -3.333rem;
 
 		> a {
 			display: none;
 		}
-	}
 
-	#contributors, h3 {
-		display: none;
-	}
+		ul {
+			&:before {
+				display: none;
+			}
 
-	#navigation {
-		.border-radius(1em);
-		.size(90%);
-		padding: 2rem;
-		background: rgba(0, 0, 0, 0.85);
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		margin: auto;
+			a {
+				padding: 0.25em;
+				background: #fff;
+				color: #000;
+				margin-bottom: 0.25em;
+			}
+		}
 
-		&:before {
-			display: none;
+		h3 {
+			color: #fff;
 		}
 	}
 
-	.icon-menu {
-		.border-radius(0.25em);
-		background: rgba(0, 0, 0, 0.75);
-		padding: 0.125em;
-		font-size: 1.625em;
+	body, aside, .icon-menu {
+		.transition(~'left .1s, right 0.1s');
+	}
+
+	.open-nav {
+		body {
+			left: -100%;
+			margin-left: -3.333rem;
+		}
+
+		aside {
+			left: 3.333rem;
+		}
 	}
 }
 
