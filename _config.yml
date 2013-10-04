@@ -42,6 +42,11 @@ contributors:
     gravatar: 0e631d686b8356102da3721bd8cd65c4
     twitter: matthewwithanm
     github: matthewwithanm
+  cwood:
+    name: Colin Wood
+    gravatar: 0cdc1f3e04f0117e594168d006687864
+    twitter: colinbits
+    github: cwood
 
 static_pages:
   - name: 'Meet HZ'
@@ -110,6 +115,8 @@ prose:
               value: "aebsr"
             - name: "Matthew Tretter"
               value: "matthewwithanm"
+            - name: "Colin Wood"
+              value: "cwood"
 
 kramdown:
   auto_ids: true
