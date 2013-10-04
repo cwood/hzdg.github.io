@@ -45,9 +45,9 @@ contributors:
 
 static_pages:
   - name: 'Meet HZ'
-    url: 'http://meethzdg.com'
-  - name: 'Labs Archive'
-    url: '/archive/'
+    url: 'http://hzdg.com'
+  # - name: 'Labs Archive'
+  #   url: '/archive/'
 
 prose:
   rooturl: '_posts'
