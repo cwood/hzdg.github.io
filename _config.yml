@@ -91,6 +91,17 @@ prose:
               value: "Community"
             - name: "Jekyll"
               value: "jekyll"
+      - name: "author"
+        field:
+          element: "select"
+          label: "Author"
+          options:
+            - name: "Kevin Kubasik"
+              value: "kkubasik"
+            - name: "Antoine Butler"
+              value: "kkubasik"
+            - name: "Matthew Tretter"
+              value: "matthewwithanm"
 
 kramdown:
   auto_ids: true
