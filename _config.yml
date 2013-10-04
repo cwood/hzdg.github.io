@@ -19,7 +19,7 @@ exclude: ["less", "coffee", "*.sublime-project", "*.sublime-workspace", "package
 pygments:    true
 markdown:    kramdown
 
-siteurl: 'http://hzdg.github.io/labs-jekyll-theme'
+siteurl: 'http://hzdg.github.io/'
 
 # Owner information
 owner:
@@ -48,6 +48,49 @@ static_pages:
     url: 'http://meethzdg.com'
   - name: 'Labs Archive'
     url: '/archive/'
+
+prose:
+  rooturl: '_posts'
+  siteurl: 'http://hzdg.github.io/'
+  media: 'media'
+  metadata:
+    _posts:
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Published"
+          value: false
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Add Tags"
+          placeholder: "Choose Tags"
+          alterable: true
+          options:
+            - name: "HTML5"
+              value: "html5"
+            - name: "CSS3"
+              value: "css3"
+            - name: "Python"
+              value: "python"
+            - name: "Django"
+              value: "django"
+            - name: "Javascript"
+              value: "javascript"
+            - name: "LESS"
+              value: "less"
+            - name: "Coffeescript"
+              value: "coffeescript"
+            - name: "DC Tech"
+              value: "#dctech"
+            - name: "Community"
+              value: "Community"
+            - name: "Jekyll"
+              value: "jekyll"
 
 kramdown:
   auto_ids: true
