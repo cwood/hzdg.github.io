@@ -63,7 +63,6 @@ prose:
         field:
           element: "textarea"
           label: "Description"
-          placeholder: "Text used as blog intro on listing pages as well as description metadata"
       - name: "published"
         field:
           element: "checkbox"
